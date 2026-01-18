@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ZIMP_Fitness.Site" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+
+    <!-- CSS -->
+    <link href="Content/site.css" rel="stylesheet" />
+
+    <!-- jQuery from CDN (allowed by brief) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="Scripts/main.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form runat="server">
+        <div class="site-header">
+            <div class="container header-inner">
+                <div class="logo">
+                    <a href="Default.aspx">Fit<span>Zone</span></a>
+                </div>
+                <nav class="site-nav">
+                    <asp:HyperLink runat="server" NavigateUrl="Default.aspx">Home</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="About.aspx">About</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="Memberships.aspx">Memberships</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="Team.aspx">Team</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="FAQ.aspx">FAQ</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="Join.aspx">Join</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="Members.aspx"> Resigstered members</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="Calculator.aspx">Calculator</asp:HyperLink>
+                </nav>
+            </div>
+        </div>
+
+        <div class="site-body">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div>© 2025 FitZone</div>
+                <div class="footer-links">
+                    <a href="https://www.hse.ie/" target="_blank">Health</a> |
+                    <a href="https://www.sportireland.ie/" target="_blank">Fitness Resources</a>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
